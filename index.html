@@ -103,6 +103,8 @@
         .nav-links {
             display: flex;
             list-style: none;
+            align-items: center;
+            gap: 10px;
         }
 
         .nav-links li a {
@@ -111,6 +113,7 @@
             padding: 10px 15px;
             font-weight: 500;
             transition: color 0.3s;
+            white-space: nowrap;
         }
 
         .nav-links li a:hover {
@@ -512,186 +515,233 @@
             margin: 20px auto;
             border-left: 4px solid var(--primary);
         }
+
         /* Mobile Menu Close Button */
-.close-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: var(--primary);
-    cursor: pointer;
-    display: none;
-}
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+            display: none;
+        }
 
-@media (max-width: 768px) {
-    .close-menu {
-        display: block;
-    }
-}
+        /* Medium Screens (Tablets: 769px to 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-links {
+                gap: 5px;
+            }
+            
+            .nav-links li a {
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+            
+            .logo-text {
+                font-size: 1.3rem;
+            }
+            
+            .logo-img {
+                height: 45px;
+            }
+            
+            .advantages-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            
+            .schedule-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .reps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-images {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
 
-        /* Responsive */
-        /* Responsive */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+        /* Small Screens (Mobile: up to 768px) */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
 
-    .nav-links {
-        position: fixed;
-        background: white;
-        flex-direction: column;
-        width: 80%;
-        height: 100vh;
-        top: 0;
-        right: -100%;
-        padding-top: 80px;
-        transition: 0.5s;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        z-index: 99;
-    }
+            .nav-links {
+                position: fixed;
+                background: white;
+                flex-direction: column;
+                width: 80%;
+                height: 100vh;
+                top: 0;
+                right: -100%;
+                padding-top: 80px;
+                transition: 0.5s;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                z-index: 99;
+                gap: 0;
+            }
 
-    .nav-links.active {
-        right: 0;
-    }
+            .nav-links.active {
+                right: 0;
+            }
 
-    .nav-links li {
-        margin: 15px 0;
-        text-align: center;
-    }
+            .nav-links li {
+                margin: 15px 0;
+                text-align: center;
+                width: 100%;
+            }
 
-    .nav-links li a {
-        display: block;
-        padding: 15px;
-        font-size: 1.1rem;
-    }
+            .nav-links li a {
+                display: block;
+                padding: 15px;
+                font-size: 1.1rem;
+                width: 100%;
+            }
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
+            .close-menu {
+                display: block;
+            }
 
-    .logo-text {
-        font-size: 1.2rem;
-    }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
 
-    .logo-img {
-        height: 40px;
-    }
+            .logo-text {
+                font-size: 1.2rem;
+            }
 
-    .section-title h2 {
-        font-size: 1.8rem;
-    }
+            .logo-img {
+                height: 40px;
+            }
 
-    .advantages-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
 
-    .schedule-grid {
-        grid-template-columns: 1fr;
-    }
+            .advantages-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
 
-    .top-scores {
-        gap: 15px;
-    }
+            .schedule-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
 
-    .score-card {
-        min-width: 120px;
-        padding: 15px;
-    }
+            .top-scores {
+                gap: 15px;
+            }
 
-    .score {
-        font-size: 2rem;
-    }
+            .score-card {
+                min-width: 120px;
+                padding: 15px;
+            }
 
-    .reps-grid {
-        grid-template-columns: 1fr;
-    }
+            .score {
+                font-size: 2rem;
+            }
 
-    .testimonial-images {
-        grid-template-columns: 1fr;
-    }
+            .reps-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .payment-details {
-        margin: 20px 10px;
-        padding: 20px;
-    }
+            .testimonial-images {
+                grid-template-columns: 1fr;
+            }
 
-    .cta h2 {
-        font-size: 1.8rem;
-    }
+            .payment-details {
+                margin: 20px 10px;
+                padding: 20px;
+            }
 
-    .cta p {
-        font-size: 1.1rem;
-    }
+            .cta h2 {
+                font-size: 1.8rem;
+            }
 
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
+            .cta p {
+                font-size: 1.1rem;
+            }
 
-@media (max-width: 480px) {
-    .hero {
-        padding: 60px 0;
-    }
-    .hall-of-fame-img {
-    width: 330px;
-}
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .hall-of-fame-img {
+                width: 100%;
+                max-width: 330px;
+            }
+        }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+        /* Extra Small Screens */
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 0;
+            }
 
-    .hero p {
-        font-size: 1rem;
-    }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
 
-    section {
-        padding: 50px 0;
-    }
+            .hero p {
+                font-size: 1rem;
+            }
 
-    .section-title {
-        margin-bottom: 30px;
-    }
+            section {
+                padding: 50px 0;
+            }
 
-    .advantage-card, .schedule-card {
-        padding: 20px;
-    }
-    .schedule-grid{
-        width: 270px;
-    }
+            .section-title {
+                margin-bottom: 30px;
+            }
 
-    .top-scores {
-        flex-direction: column;
-        align-items: center;
-    }
+            .advantage-card, .schedule-card {
+                padding: 20px;
+            }
 
-    .score-card {
-        width: 100%;
-        max-width: 200px;
-    }
+            .top-scores {
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
+            .score-card {
+                width: 100%;
+                max-width: 200px;
+            }
 
-    .logo-container {
-        gap: 10px;
-    }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
 
-    .logo-text {
-        font-size: 1rem;
-    }
+            .logo-container {
+                gap: 10px;
+            }
 
-    .logo-img {
-        height: 35px;
-    }
-}
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .logo-img {
+                height: 35px;
+            }
+        }
     </style>
 </head>
 <body>
-       <!-- Header -->
+    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -716,6 +766,7 @@
             </nav>
         </div>
     </header>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
@@ -906,7 +957,7 @@
             </div>
             <div class="reps-grid">
                 <div class="rep-card">
-                    <img src="Images/dot8.jpg" alt="ObiKoya Hephzibah" class="rep-img">
+                    <img src="Images/dot 8.jpg" alt="ObiKoya Hephzibah" class="rep-img">
                     <div class="rep-info">
                         <h3>ObiKoya Hephzibah (Phoenix)</h3>
                         <p>FUMMSA DPT</p>
@@ -949,7 +1000,7 @@
                 <p>The visionary behind Dynamic Online Tutorials</p>
             </div>
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <img src="Images/dot12.jpg" alt="Dynamic Founder" class="hall-of-fame-img">
+                <img src="." alt="Dynamic Founder" class="hall-of-fame-img">
                 <div style="margin-top: 20px;">
                     <h3 style="color: var(--primary);">Dynamic</h3>
                     <p>An undergraduate of the Prestigious Obafemi Awolowo University. The C.E.O. & Founder of Dynamic Online Tutorials.</p>
@@ -1017,9 +1068,29 @@
         // Mobile Menu Toggle
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
+        const closeMenu = document.getElementById('closeMenu');
+        const navbar = document.querySelector('.navbar');
 
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+
+        // Close menu when clicking on links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
         });
 
         // Testimonial Carousel
@@ -1072,30 +1143,8 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    // Close mobile menu if open
-                    navLinks.classList.remove('active');
                 }
             });
-        });
-                // Mobile Menu Close Button
-        const closeMenu = document.getElementById('closeMenu');
-        
-        closeMenu.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-        });
-
-        // Close menu when clicking on links
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!navbar.contains(e.target) && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
         });
     </script>
 </body>
