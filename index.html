@@ -392,6 +392,39 @@
             font-size: 0.9rem;
         }
 
+        /* Founder Section */
+        .founder-section {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            border-top: 4px solid var(--primary);
+        }
+
+        .founder-icon {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .founder-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .founder-quote {
+            font-style: italic;
+            color: var(--secondary);
+            border-left: 3px solid var(--primary);
+            padding-left: 20px;
+            margin: 25px 0;
+        }
+
         /* CTA */
         .cta {
             background: linear-gradient(to right, var(--primary), var(--secondary));
@@ -570,6 +603,10 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .founder-section {
+                padding: 40px 30px;
+            }
         }
 
         /* Small Screens (Mobile: up to 768px) */
@@ -682,6 +719,18 @@
             .hall-of-fame-img {
                 width: 100%;
                 max-width: 330px;
+            }
+            
+            .founder-section {
+                padding: 30px 20px;
+            }
+            
+            .founder-icon {
+                font-size: 3rem;
+            }
+            
+            .founder-description {
+                font-size: 1rem;
             }
         }
 
@@ -992,19 +1041,35 @@
         </div>
     </section>
 
-    <!-- Meet the CEO -->
-    <section id="ceo" style="background-color: var(--light);">
+    <!-- Meet the Founder -->
+    <section id="founder" style="background-color: var(--light);">
         <div class="container">
             <div class="section-title">
                 <h2>Meet Our Founder</h2>
                 <p>The visionary behind Dynamic Online Tutorials</p>
             </div>
-            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-                <img src="." alt="Dynamic Founder" class="hall-of-fame-img">
-                <div style="margin-top: 20px;">
-                    <h3 style="color: var(--primary);">Dynamic</h3>
-                    <p>An undergraduate of the Prestigious Obafemi Awolowo University. The C.E.O. & Founder of Dynamic Online Tutorials.</p>
+            <div class="founder-section">
+                <div class="founder-icon">
+                    <i class="fas fa-user-graduate"></i>
                 </div>
+                <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.8rem;">Dynamic</h3>
+                <p class="founder-description">
+                    An undergraduate of the prestigious Obafemi Awolowo University, Dynamic is the visionary C.E.O. and Founder of Dynamic Online Tutorials. 
+                    With a passion for academic excellence and a deep understanding of the challenges faced by UTME aspirants, Dynamic founded DOT with 
+                    the mission to transform the educational landscape for Nigerian students.
+                </p>
+                <p class="founder-description">
+                    Under Dynamic's leadership, DOT has grown from a small initiative to one of Nigeria's most trusted online tutorial platforms, 
+                    producing hundreds of high-scoring students who have gained admission into top universities across the country. His innovative 
+                    approach to teaching and personalized mentorship has revolutionized how students prepare for their examinations.
+                </p>
+                <div class="founder-quote">
+                    "Our mission is not just to help students pass exams, but to build confident, knowledgeable individuals who will become leaders in their chosen fields."
+                </div>
+                <p class="founder-description">
+                    Dynamic's hands-on approach and commitment to student success have earned him the affectionate nickname "Daddy" among students, 
+                    reflecting the trust and respect they have for his guidance and mentorship.
+                </p>
             </div>
         </div>
     </section>
